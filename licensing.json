@@ -1,0 +1,11 @@
+{
+    "status": "OK",
+    "expirationDate": "May 31, 2022 UTC",
+    "licensedDeviceCounts": {
+        "MX100": 1,
+        "MS120-24P": 4,
+        "MS120-48LP": 7,
+        "MS410-16": 1,
+        "wireless": 19
+    }
+}

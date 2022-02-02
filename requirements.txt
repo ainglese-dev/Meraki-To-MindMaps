@@ -1,0 +1,6 @@
+requests
+meraki
+json
+prettytable
+dateutils
+mdutils

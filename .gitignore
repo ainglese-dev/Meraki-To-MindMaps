@@ -1,0 +1,8 @@
+Scripts/
+code_for_testing.py
+.env
+Include/
+Lib/
+*.cfg
+__*
+share/
