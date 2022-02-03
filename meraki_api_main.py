@@ -8,11 +8,15 @@ from mdutils.mdutils import MdUtils
 from meraki_info import get_licensing
 
 def lic_date(date):
+    '''
+    This funtion will replace date to numbers.
+    Licensing date is not sortable from API source.
+    '''
     if date != "N/A":
         date_formatted = parse(date.replace(" UTC", "")).strftime('%Y-%m-%d')
         return date_formatted
     else:
-        return date      
+        return date 
 
 # Defining your API key as a variable in source code is not recommended,
 # define a regular.env file to load variables
