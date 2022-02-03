@@ -1,5 +1,7 @@
+import os
 import meraki
 import json
+from dotenv import load_dotenv
 from prettytable import PrettyTable
 from meraki_info import get_licensing
 from dateutil.parser import parse
@@ -12,10 +14,15 @@ def lic_date(date):
     else:
         return date      
 
-# Defining your API key as a variable in source code is not recommended
-API_KEY = '6bec40cf957de430a6f1f2baa056b99a4fac9ea0'
+# Defining your API key as a variable in source code is not recommended, define a regular.env file to load variables
+load_dotenv()
+API_KEY = os.getenv('API_KEY')
+if not API_KEY:
+    API_KEY = '6bec40cf957de430a6f1f2baa056b99a4fac9ea0'  ### Meraki Always-On API KEY by default
+    print("    >>> WARN: Using default Meraki Always-On API KEY\n\n")
 # Instead, use an environment variable as shown under the Usage section
 # @ https://github.com/meraki/dashboard-api-python/
+
 dashboard = meraki.DashboardAPI(API_KEY, log_path='logs_meraki/', suppress_logging=True)
 response = dashboard.organizations.getOrganizations()
 

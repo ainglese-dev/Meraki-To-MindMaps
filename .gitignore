@@ -6,3 +6,7 @@ Lib/
 *.cfg
 __*
 share/
+lib64/
+lib/
+bin/
+lib64

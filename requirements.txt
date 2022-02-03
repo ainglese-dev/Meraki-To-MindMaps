@@ -4,3 +4,4 @@ meraki
 prettytable
 dateutils
 mdutils
+python-dotenv
