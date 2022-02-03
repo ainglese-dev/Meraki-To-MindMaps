@@ -44,10 +44,7 @@ pTable.field_names = ["Org ID",
                     "licensed Devices"]
 for company in response:
     licensing = get_licensing(API_KEY,company["id"])
-    equipments = json.dumps(licensing["licensedDeviceCounts"])
-                            .replace(",", "\n")
-                            .replace("{", "")
-                            .replace("}", "")
+    equipments = json.dumps(licensing["licensedDeviceCounts"]).replace(",", "\n").replace("{", "").replace("}", "")
     pTable.add_row([company["id"],
                     company["name"],
                     licensing["status"],
