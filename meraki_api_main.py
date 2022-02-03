@@ -1,11 +1,11 @@
 import os
-import meraki
 import json
+import meraki
 from dotenv import load_dotenv
 from prettytable import PrettyTable
-from meraki_info import get_licensing
 from dateutil.parser import parse
 from mdutils.mdutils import MdUtils
+from meraki_info import get_licensing
 
 def lic_date(date):
     if date != "N/A":
@@ -14,7 +14,8 @@ def lic_date(date):
     else:
         return date      
 
-# Defining your API key as a variable in source code is not recommended, define a regular.env file to load variables
+# Defining your API key as a variable in source code is not recommended,
+# define a regular.env file to load variables
 load_dotenv()
 API_KEY = os.getenv('API_KEY')
 if not API_KEY:
@@ -51,5 +52,4 @@ pTable.align = "r"
 pTable.sortby = "Expiration date"
 pTable.hrules = True
 print(pTable)
-
 mdFile.create_md_file()
