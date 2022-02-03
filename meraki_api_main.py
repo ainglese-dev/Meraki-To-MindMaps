@@ -37,18 +37,21 @@ mdFile.new_header(level=1, title="Meraki Licensing Details")
 
 ### CLI pretty Table
 pTable = PrettyTable()
-pTable.field_names = ["Org ID", 
-                    "Client Name", 
-                    "Licensing Status", 
-                    "Expiration date", 
+pTable.field_names = ["Org ID",
+                    "Client Name",
+                    "Licensing Status",
+                    "Expiration date",
                     "licensed Devices"]
 for company in response:
     licensing = get_licensing(API_KEY,company["id"])
-    equipments = json.dumps(licensing["licensedDeviceCounts"]).replace(",", "\n").replace("{", "").replace("}", "")
-    pTable.add_row([company["id"], 
-                    company["name"], 
-                    licensing["status"], 
-                    lic_date(licensing["expirationDate"]), 
+    equipments = json.dumps(licensing["licensedDeviceCounts"])
+                            .replace(",", "\n")
+                            .replace("{", "")
+                            .replace("}", "")
+    pTable.add_row([company["id"],
+                    company["name"],
+                    licensing["status"],
+                    lic_date(licensing["expirationDate"]),
                     equipments])
     company_title = f"[{company['name']}]({company['url']})"
     mdFile.new_header(level=2, title=company_title)
