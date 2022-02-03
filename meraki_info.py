@@ -1,6 +1,8 @@
 
 import meraki
-
+'''
+This module will retrieve all the licensing details
+'''
 def get_licensing(api_key,org_id):
     '''
     This module will retrieve all the licensing details
