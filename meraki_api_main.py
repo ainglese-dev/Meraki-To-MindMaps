@@ -65,3 +65,4 @@ pTable.sortby = "Expiration date"
 pTable.hrules = True
 print(pTable)
 mdFile.create_md_file()
+os.system(f'markmap --no-open meraki_licensing.md --output licensing_MindMap.html')
