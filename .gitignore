@@ -10,4 +10,4 @@ lib64/
 lib/
 bin/
 lib64
-logs
+*.log
