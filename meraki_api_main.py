@@ -3,20 +3,8 @@ import json
 import meraki
 from dotenv import load_dotenv
 from prettytable import PrettyTable
-from dateutil.parser import parse
 from mdutils.mdutils import MdUtils
-from meraki_info import get_licensing
-
-def lic_date(date):
-    '''
-    This funtion will replace date to numbers.
-    Licensing date is not sortable from API source.
-    '''
-    if date != "N/A":
-        date_formatted = parse(date.replace(" UTC", "")).strftime('%Y-%m-%d')
-        return date_formatted
-    else:
-        return date
+from meraki_info import get_licensing, lic_date, table_svg
 
 # Defining your API key as a variable in source code is not recommended,
 # define a regular.env file to load variables
@@ -28,11 +16,11 @@ if not API_KEY:
 # Instead, use an environment variable as shown under the Usage section
 # @ https://github.com/meraki/dashboard-api-python/
 
-dashboard = meraki.DashboardAPI(API_KEY, log_path='logs_meraki/', suppress_logging=True)
+dashboard = meraki.DashboardAPI(API_KEY, log_path="logs", suppress_logging=True)
 response = dashboard.organizations.getOrganizations()
 
 ### MD File creation from json to md
-mdFile = MdUtils(file_name='meraki_licensing.md')
+mdFile = MdUtils(file_name='outputs/meraki_licensing.md')
 mdFile.new_header(level=1, title="Meraki Licensing Details")
 
 ### CLI pretty Table
@@ -63,6 +51,7 @@ for company in response:
 pTable.align = "r"
 pTable.sortby = "Expiration date"
 pTable.hrules = True
-print(pTable)
+# print(pTable)
+table_svg(pTable)
 mdFile.create_md_file()
-os.system(f'markmap --no-open meraki_licensing.md --output licensing_MindMap.html')
+os.system(f'markmap --no-open outputs/meraki_licensing.md --output outputs/licensing_MindMap.html')
