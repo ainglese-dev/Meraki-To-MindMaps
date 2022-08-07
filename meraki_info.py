@@ -2,9 +2,11 @@
 import meraki
 from dateutil.parser import parse
 from rich.console import Console
-from rich.table import Table
-import os
-import webbrowser
+
+'''
+Current function definition being used in main API script 
+'''
+
 
 def get_licensing(api_key,org_id):
     '''
@@ -41,5 +43,3 @@ def table_svg(table):
     console = Console(record=True)
     console.print(table, justify="center")
     console.save_svg("outputs/table.svg", title="save_table_svg.py")
-   # webbrowser.open(f"file://{os.path.abspath('table.svg')}")
-
