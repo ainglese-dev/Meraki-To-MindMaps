@@ -40,7 +40,6 @@ dashboard = meraki.DashboardAPI(API_KEY, log_path="logs", suppress_logging=True)
 # Gathering Org information list
 logging.info('Gathering Organizations from Meraki via API')
 response = dashboard.organizations.getOrganizations()
-
 ### MD File creation
 logging.info('Creating md file under outputs folder')
 mdFile = MdUtils(file_name='outputs/meraki_licensing.md')
