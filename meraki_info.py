@@ -1,12 +1,7 @@
-
+''' Current function definition being used in main API script '''
 import meraki
 from dateutil.parser import parse
 from rich.console import Console
-
-'''
-Current function definition being used in main API script 
-'''
-
 
 def get_licensing(api_key,org_id):
     '''

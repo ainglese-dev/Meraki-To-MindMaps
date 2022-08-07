@@ -1,3 +1,7 @@
+''' 
+Main script to gather organizations and their corresponding devices and
+licencing status associated with expiration date
+'''
 import os
 import json
 import logging
@@ -8,11 +12,6 @@ from prettytable import PrettyTable
 from mdutils.mdutils import MdUtils
 from meraki_info import get_licensing, lic_date, table_svg
 
-
-"""
- Script to gather organizations and their corresponding devices and
- licencing status associated with expiration date
-"""
 # defining logging system
 
 logging.basicConfig(
