@@ -86,11 +86,11 @@ pTable.sortby = "Expiration date"
 pTable.hrules = True
 
 # Providing SVG file in the outputs folder
-logging.info('Creating SVG file from table')
+logging.info('Creating SVG file from collected data')
 table_svg(pTable)
 
 # Providing markdown file in the outputs folder
-logging.info('Creating md file from table')
+logging.info('Creating md file from collected data')
 mdFile.create_md_file()
 
 # Providing html markmap file in the outputs folder
