@@ -1,4 +1,4 @@
-''' 
+'''
 Main script to gather organizations and their corresponding devices and
 licencing status associated with expiration date
 '''
@@ -6,8 +6,8 @@ import os
 import json
 import logging
 import sys
-import meraki
 import time
+import meraki
 from dotenv import load_dotenv
 from prettytable import PrettyTable
 from mdutils.mdutils import MdUtils
@@ -30,7 +30,7 @@ load_dotenv()
 API_KEY = os.getenv('API_KEY')
 if not API_KEY:
     API_KEY = '6bec40cf957de430a6f1f2baa056b99a4fac9ea0'  ### Meraki Always-On API KEY by default
-    logging.warning("Using default Meraki Always-On API KEY, please, create .env file if applying private key.")
+    logging.warning("Using default Meraki Always-On API KEY, create .env file for private key.")
 # Instead, use an environment variable as shown under the Usage section
 # @ https://github.com/meraki/dashboard-api-python/
 

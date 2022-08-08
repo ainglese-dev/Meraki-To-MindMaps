@@ -44,8 +44,8 @@ def progress_bar(progress, total):
     Progress bars are needed when API calls are required or while building output files
     '''
     percent = 100 * (progress / total)
-    bar = '#' * int(percent) + '-' *(100 - int(percent))
+    prog_bar = '#' * int(percent) + '-' *(100 - int(percent))
     if percent == 100:
-        print(f"\r|{bar}| {percent:.2f}%", end="\n")
+        print(f"\r|{prog_bar}| {percent:.2f}%", end="\n")
     else:
-        print(f"\r|{bar}| {percent:.2f}%", end="\r")
+        print(f"\r|{prog_bar}| {percent:.2f}%", end="\r")
