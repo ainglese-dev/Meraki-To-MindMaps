@@ -7,16 +7,17 @@ import json
 import logging
 import sys
 import meraki
+import time
 from dotenv import load_dotenv
 from prettytable import PrettyTable
 from mdutils.mdutils import MdUtils
-from meraki_info import get_licensing, lic_date, table_svg
+from meraki_info import get_licensing, lic_date, table_svg, progress_bar
 
 # defining logging system
 
 logging.basicConfig(
     level=logging.INFO,
-    format="%(asctime)s [%(levelname)s] %(message)s",
+    format="%(asctime)s [%(levelname)s] %(message)s\n",
     handlers=[
         logging.StreamHandler(sys.stdout)
     ]
@@ -41,7 +42,7 @@ dashboard = meraki.DashboardAPI(API_KEY, log_path="logs", suppress_logging=True)
 logging.info('Gathering Organizations from Meraki via API')
 response = dashboard.organizations.getOrganizations()
 ### MD File creation
-logging.info('Creating md file under outputs folder')
+logging.info('Initializing md file under outputs folder')
 mdFile = MdUtils(file_name='outputs/meraki_licensing.md')
 mdFile.new_header(level=1, title="Meraki Licensing Details")
 
@@ -54,6 +55,8 @@ pTable.field_names = ["Org ID",
                     "licensed Devices"]
 
 # Adapting each Org per row
+total_progress = len(response)
+logging.info(f'Collecting licensing via API per {total_progress} company(ies)')
 
 for company in response:
     licensing = get_licensing(API_KEY,company["id"])
@@ -73,6 +76,8 @@ for company in response:
             mdFile.new_header(level=4, title=title)
     else:
         mdFile.new_header(level=4, title=licensing["licensedDeviceCounts"])
+    time.sleep(0.5)
+    progress_bar(response.index(company), total_progress -1)
 
 # Structure the current Org table
 

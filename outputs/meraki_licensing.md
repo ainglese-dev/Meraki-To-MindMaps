@@ -109,3 +109,137 @@
 ### Allowed Devices
 
 #### MS220-8P: 1
+
+## [Cisco Live US 2019](https://n22.meraki.com/o/CVQqTb/manage/organization/overview)
+  
+- Expiration Date: 2020-07-15
+### Allowed Devices
+
+#### MS120-8FP: 10
+
+#### MV: 10
+
+#### MX67: 10
+
+#### wireless: 10
+
+#### Z3C: 2
+
+## [Forest City - Other](https://n42.meraki.com/o/E_utnd/manage/organization/overview)
+  
+- Expiration Date: 2024-08-18
+### Allowed Devices
+
+#### wireless: 20
+
+## [Ftreqah organization](https://n22.meraki.com/o/Kpj8kdw/manage/organization/overview)
+  
+- Expiration Date: N/A
+### Allowed Devices
+
+## [test5](https://n22.meraki.com/o/TDt5Jcw/manage/organization/overview)
+  
+- Expiration Date: N/A
+### Allowed Devices
+
+## [Your Organization](https://n22.meraki.com/o/LwDcydw/manage/organization/overview)
+  
+- Expiration Date: N/A
+### Allowed Devices
+
+#### N/A
+
+## [Personal.Lekhnath](https://n22.meraki.com/o/HjSXiaw/manage/organization/overview)
+  
+- Expiration Date: N/A
+### Allowed Devices
+
+## [organization with name changed](https://n18.meraki.com/o/TY6awbs/manage/organization/overview)
+  
+- Expiration Date: N/A
+### Allowed Devices
+
+## [PM_Test](https://n22.meraki.com/o/lUmuUdw/manage/organization/overview)
+  
+- Expiration Date: N/A
+### Allowed Devices
+
+## [My organization](https://n22.meraki.com/o/wzbgjbw/manage/organization/overview)
+  
+- Expiration Date: N/A
+### Allowed Devices
+
+## [My organization](https://n22.meraki.com/o/N1e3qdw/manage/organization/overview)
+  
+- Expiration Date: N/A
+### Allowed Devices
+
+## [DevNet Test Org](https://n22.meraki.com/o/4ApTKbw/manage/organization/overview)
+  
+- Expiration Date: N/A
+### Allowed Devices
+
+## [The Org](https://n22.meraki.com/o/yotmJcw/manage/organization/overview)
+  
+- Expiration Date: N/A
+### Allowed Devices
+
+## [gk](https://n22.meraki.com/o/XjvDBcw/manage/organization/overview)
+  
+- Expiration Date: N/A
+### Allowed Devices
+
+## [thienbao](https://n22.meraki.com/o/dADP-cw/manage/organization/overview)
+  
+- Expiration Date: N/A
+### Allowed Devices
+
+## [changetest](https://n22.meraki.com/o/ZF92zcw/manage/organization/overview)
+  
+- Expiration Date: N/A
+### Allowed Devices
+
+## [Testlab](https://n22.meraki.com/o/AvGDGdw/manage/organization/overview)
+  
+- Expiration Date: N/A
+### Allowed Devices
+
+## [Sample Org](https://n22.meraki.com/o/wXe-Faw/manage/organization/overview)
+  
+- Expiration Date: N/A
+### Allowed Devices
+
+## [sample_network](https://n22.meraki.com/o/IJQKjbw/manage/organization/overview)
+  
+- Expiration Date: N/A
+### Allowed Devices
+
+#### N/A
+
+## [My organization](https://n22.meraki.com/o/aLMnNaw/manage/organization/overview)
+  
+- Expiration Date: N/A
+### Allowed Devices
+
+## [DeLab](https://n392.meraki.com/o/49Gm_c/manage/organization/overview)
+  
+- Expiration Date: 2024-10-13
+### Allowed Devices
+
+#### wireless: 40
+
+#### MS220-8P: 9
+
+#### MX65: 6
+
+#### MC: 4
+
+#### MV: 9
+
+#### MS220-8: 1
+
+#### SM: 5
+
+#### MX250: 1
+
+#### MS250-48FP: 1
