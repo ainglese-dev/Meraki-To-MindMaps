@@ -4,242 +4,171 @@
 
 # Meraki Licensing Details
 
-## [Next Meraki Org](https://n18.meraki.com/o/PoiDucs/manage/organization/overview)
+## [MATUNA - Gaira Café](https://n110.meraki.com/o/4dzVEa/manage/organization/overview)
   
-- Expiration Date: N/A
+- Expiration Date: 2023-01-10
 ### Allowed Devices
 
-## [MuthanaAPITest](https://n22.meraki.com/o/NBowlcw/manage/organization/overview)
-  
-- Expiration Date: N/A
-### Allowed Devices
+#### MS220-24: 1
 
-## [DevNetAssoc](https://n6.meraki.com/o/dcGsWag/manage/organization/overview)
-  
-- Expiration Date: 2025-01-31
-### Allowed Devices
+#### MS220-24P: 1
 
-#### MS120-8FP: 1
+#### MX80: 1
 
-#### MS250-24: 1
+#### wireless: 11
 
-#### MS350-48LP: 1
+#### MX64: 1
 
-#### MS410-16: 1
-
-#### MS425-32: 1
-
-#### MV: 5
-
-#### MX100: 1
-
-#### MX450: 1
-
-#### MX67: 1
-
-#### MX68W: 1
-
-#### Z3C: 1
-
-#### wireless: 5
-
-## [dev ](https://n18.meraki.com/o/vB2D8a/manage/organization/overview)
-  
-- Expiration Date: 2025-11-21
-### Allowed Devices
-
-#### MX60: 5
-
-#### MX65: 3
-
-#### MV: 8
-
-#### MS220-24P: 5
-
-#### MS220-48FP: 2
-
-#### wireless: 8
-
-#### MS220-8P: 10
-
-#### MC: 1
-
-#### SM: 101
-
-#### MX67C: 1
-
-## [trung](https://n22.meraki.com/o/4lFkacw/manage/organization/overview)
-  
-- Expiration Date: N/A
-### Allowed Devices
-
-## [TNF - The Network Factory](https://n22.meraki.com/o/K5Faybw/manage/organization/overview)
-  
-- Expiration Date: N/A
-### Allowed Devices
-
-## [SVR](https://n22.meraki.com/o/rMNradw/manage/organization/overview)
-  
-- Expiration Date: N/A
-### Allowed Devices
-
-## [Jacks_test_net](https://n18.meraki.com/o/22Uqhas/manage/organization/overview)
-  
-- Expiration Date: N/A
-### Allowed Devices
-
-## [DevNet Test Org](https://n22.meraki.com/o/yZVJIcw/manage/organization/overview)
-  
-- Expiration Date: N/A
-### Allowed Devices
-
-## [helloworld](https://n22.meraki.com/o/hC66edw/manage/organization/overview)
-  
-- Expiration Date: N/A
-### Allowed Devices
-
-## [Wotan](https://n22.meraki.com/o/U3paXbw/manage/organization/overview)
-  
-- Expiration Date: N/A
-### Allowed Devices
-
-## [DevNet Sandbox](https://n149.meraki.com/o/-t35Mb/manage/organization/overview)
-  
-- Expiration Date: 2029-07-07
-### Allowed Devices
-
-#### MS220-8P: 1
-
-## [Cisco Live US 2019](https://n22.meraki.com/o/CVQqTb/manage/organization/overview)
-  
-- Expiration Date: 2020-07-15
-### Allowed Devices
-
-#### MS120-8FP: 10
-
-#### MV: 10
-
-#### MX67: 10
-
-#### wireless: 10
-
-#### Z3C: 2
-
-## [Forest City - Other](https://n42.meraki.com/o/E_utnd/manage/organization/overview)
-  
-- Expiration Date: 2024-08-18
-### Allowed Devices
-
-#### wireless: 20
-
-## [Ftreqah organization](https://n22.meraki.com/o/Kpj8kdw/manage/organization/overview)
-  
-- Expiration Date: N/A
-### Allowed Devices
-
-## [test5](https://n22.meraki.com/o/TDt5Jcw/manage/organization/overview)
-  
-- Expiration Date: N/A
-### Allowed Devices
-
-## [Your Organization](https://n22.meraki.com/o/LwDcydw/manage/organization/overview)
+## [Heel Colombia](https://n264.meraki.com/o/m_vIFa/manage/organization/overview)
   
 - Expiration Date: N/A
 ### Allowed Devices
 
 #### N/A
 
-## [Personal.Lekhnath](https://n22.meraki.com/o/HjSXiaw/manage/organization/overview)
+## [CAS - Colegio Colombo Americano](https://n264.meraki.com/o/QD5wicbc/manage/organization/overview)
   
-- Expiration Date: N/A
+- Expiration Date: 2022-11-12
 ### Allowed Devices
 
-## [organization with name changed](https://n18.meraki.com/o/TY6awbs/manage/organization/overview)
-  
-- Expiration Date: N/A
-### Allowed Devices
+#### SM: 1
 
-## [PM_Test](https://n22.meraki.com/o/lUmuUdw/manage/organization/overview)
-  
-- Expiration Date: N/A
-### Allowed Devices
+#### wireless: 88
 
-## [My organization](https://n22.meraki.com/o/wzbgjbw/manage/organization/overview)
-  
-- Expiration Date: N/A
-### Allowed Devices
+#### MS220-24P: 3
 
-## [My organization](https://n22.meraki.com/o/N1e3qdw/manage/organization/overview)
-  
-- Expiration Date: N/A
-### Allowed Devices
+#### MS225-48: 2
 
-## [DevNet Test Org](https://n22.meraki.com/o/4ApTKbw/manage/organization/overview)
-  
-- Expiration Date: N/A
-### Allowed Devices
-
-## [The Org](https://n22.meraki.com/o/yotmJcw/manage/organization/overview)
-  
-- Expiration Date: N/A
-### Allowed Devices
-
-## [gk](https://n22.meraki.com/o/XjvDBcw/manage/organization/overview)
-  
-- Expiration Date: N/A
-### Allowed Devices
-
-## [thienbao](https://n22.meraki.com/o/dADP-cw/manage/organization/overview)
-  
-- Expiration Date: N/A
-### Allowed Devices
-
-## [changetest](https://n22.meraki.com/o/ZF92zcw/manage/organization/overview)
-  
-- Expiration Date: N/A
-### Allowed Devices
-
-## [Testlab](https://n22.meraki.com/o/AvGDGdw/manage/organization/overview)
-  
-- Expiration Date: N/A
-### Allowed Devices
-
-## [Sample Org](https://n22.meraki.com/o/wXe-Faw/manage/organization/overview)
-  
-- Expiration Date: N/A
-### Allowed Devices
-
-## [sample_network](https://n22.meraki.com/o/IJQKjbw/manage/organization/overview)
-  
-- Expiration Date: N/A
-### Allowed Devices
-
-#### N/A
-
-## [My organization](https://n22.meraki.com/o/aLMnNaw/manage/organization/overview)
-  
-- Expiration Date: N/A
-### Allowed Devices
-
-## [DeLab](https://n392.meraki.com/o/49Gm_c/manage/organization/overview)
-  
-- Expiration Date: 2024-10-13
-### Allowed Devices
-
-#### wireless: 40
-
-#### MS220-8P: 9
-
-#### MX65: 6
-
-#### MC: 4
-
-#### MV: 9
-
-#### MS220-8: 1
-
-#### SM: 5
+#### MS220-48: 3
 
 #### MX250: 1
 
-#### MS250-48FP: 1
+#### MS390-48A: 1
+
+#### MS355-24X2: 1
+
+## [Quirumedicas](https://n264.meraki.com/o/NJPZNdie/manage/organization/overview)
+  
+- Expiration Date: 2026-01-07
+### Allowed Devices
+
+#### MX84: 2
+
+#### MX67W: 4
+
+#### MX68: 2
+
+#### wireless: 3
+
+## [Colegio Rochester](https://n264.meraki.com/o/kVo1Abbc/manage/organization/overview)
+  
+- Expiration Date: 2023-08-22
+### Allowed Devices
+
+#### wireless: 52
+
+## [Camara Comercio Barranquilla](https://n515.meraki.com/o/7eTdZb/manage/organization/overview)
+  
+- Expiration Date: 2023-11-13
+### Allowed Devices
+
+#### MX100: 1
+
+#### MX67: 5
+
+## [Tu Boleta](https://n515.meraki.com/o/Mr764d/manage/organization/overview)
+  
+- Expiration Date: 2023-09-02
+### Allowed Devices
+
+#### wireless: 3
+
+## [MPS Mayorista Colombia](https://n264.meraki.com/o/wRllPb/manage/organization/overview)
+  
+- Expiration Date: N/A
+### Allowed Devices
+
+#### N/A
+
+## [Atria](https://n264.meraki.com/o/4gpajbbc/manage/organization/overview)
+  
+- Expiration Date: 2022-09-15
+### Allowed Devices
+
+#### MS120-8LP: 3
+
+#### SM: 300
+
+#### wireless: 3
+
+#### MX64: 3
+
+## [Colombiana de Trasplantes](https://n264.meraki.com/o/mfKFec/manage/organization/overview)
+  
+- Expiration Date: 2023-07-05
+### Allowed Devices
+
+#### wireless: 5
+
+#### MS120-24P: 4
+
+#### MS250-24: 1
+
+#### MX84: 1
+
+## [Camara de Comercio del Casanare](https://n264.meraki.com/o/meGZna/manage/organization/overview)
+  
+- Expiration Date: 2023-06-15
+### Allowed Devices
+
+#### MS120-24P: 4
+
+#### MS120-48LP: 7
+
+#### MS410-16: 1
+
+#### wireless: 19
+
+#### MX100: 1
+
+## [AGILITIX](https://n264.meraki.com/o/QqiuPd/manage/organization/overview)
+  
+- Expiration Date: N/A
+### Allowed Devices
+
+#### N/A
+
+## [Miroal](https://n129.meraki.com/o/WsO0Tb/manage/organization/overview)
+  
+- Expiration Date: 2024-02-22
+### Allowed Devices
+
+#### MX64: 1
+
+## [Drug Store](https://n264.meraki.com/o/V5Dwed/manage/organization/overview)
+  
+- Expiration Date: 2024-02-05
+### Allowed Devices
+
+#### wireless: 7
+
+## [Grupo KOBA](https://n30.meraki.com/o/vwV0SdE/manage/organization/overview)
+  
+- Expiration Date: 2019-11-27
+### Allowed Devices
+
+#### wireless: 3
+
+## [atria](https://n406.meraki.com/o/qE-yxd/manage/organization/overview)
+  
+- Expiration Date: N/A
+### Allowed Devices
+
+#### N/A
+
+## [Multiflora](https://n30.meraki.com/o/HdOgnd/manage/organization/overview)
+  
+- Expiration Date: 2019-11-23
+### Allowed Devices
+
+#### wireless: 1

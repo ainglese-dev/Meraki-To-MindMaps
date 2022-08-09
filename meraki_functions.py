@@ -46,6 +46,6 @@ def progress_bar(progress, total):
     percent = 100 * (progress / total)
     prog_bar = '#' * int(percent) + '-' *(100 - int(percent))
     if percent == 100:
-        print(f"\r|{prog_bar}| {percent:.2f}%", end="\n")
+        print(f"\r|{prog_bar}| {percent:.2f}%", end="\n\n")
     else:
         print(f"\r|{prog_bar}| {percent:.2f}%", end="\r")

@@ -11,7 +11,7 @@ import meraki
 from dotenv import load_dotenv
 from prettytable import PrettyTable
 from mdutils.mdutils import MdUtils
-from meraki_info import get_licensing, lic_date, table_svg, progress_bar
+from meraki_functions import get_licensing, lic_date, table_svg, progress_bar
 
 # defining logging system
 
@@ -76,7 +76,7 @@ for company in response:
             mdFile.new_header(level=4, title=title)
     else:
         mdFile.new_header(level=4, title=licensing["licensedDeviceCounts"])
-    time.sleep(0.5)
+    time.sleep(1)
     progress_bar(response.index(company), total_progress -1)
 
 # Structure the current Org table
@@ -96,3 +96,9 @@ mdFile.create_md_file()
 # Providing html markmap file in the outputs folder
 logging.info('Creating Markmap file from md file')
 os.system(f'markmap --no-open outputs/meraki_licensing.md --output outputs/licensing_MindMap.html')
+
+desired_OrgID = input(" >>>> Please, select desired Org ID to create SVG and markmap from table above: ")
+print('\n')
+logging.info(f'Creating .md , SVG and markmap file for requested Org ID: {desired_OrgID}.')
+# Getting output files for specific OrgID
+get_orgid_outputs(desired_OrgID)
