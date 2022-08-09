@@ -7,11 +7,10 @@ import json
 import logging
 import sys
 import time
-import meraki
 from dotenv import load_dotenv
 from prettytable import PrettyTable
 from mdutils.mdutils import MdUtils
-from meraki_functions import get_licensing, lic_date, table_svg, progress_bar
+from meraki_functions import iniciate_dashboard, get_licensing, lic_date, table_svg, progress_bar, get_orgid_outputs
 
 # defining logging system
 
@@ -36,7 +35,7 @@ if not API_KEY:
 
 # Defining connectivity to Meraki (suppress logging since it works, Duh!)
 
-dashboard = meraki.DashboardAPI(API_KEY, log_path="logs", suppress_logging=True)
+dashboard = iniciate_dashboard(API_KEY)
 
 # Gathering Org information list
 logging.info('Gathering Organizations from Meraki via API')
@@ -101,4 +100,5 @@ desired_OrgID = input(" >>>> Please, select desired Org ID to create SVG and mar
 print('\n')
 logging.info(f'Creating .md , SVG and markmap file for requested Org ID: {desired_OrgID}.')
 # Getting output files for specific OrgID
-get_orgid_outputs(desired_OrgID)
+get_orgid_outputs(API_KEY, desired_OrgID)
+logging.info(f'Created .md , SVG and markmap file for requested Org ID: {desired_OrgID}.')

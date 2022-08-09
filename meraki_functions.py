@@ -1,7 +1,12 @@
 ''' Current function definition being used in main API script '''
 import meraki
+from prettytable import PrettyTable
 from dateutil.parser import parse
 from rich.console import Console
+
+def iniciate_dashboard(api_key):
+    dashboard = meraki.DashboardAPI(api_key, log_path="logs", suppress_logging=True)
+    return dashboard
 
 def get_licensing(api_key,org_id):
     '''
@@ -49,3 +54,26 @@ def progress_bar(progress, total):
         print(f"\r|{prog_bar}| {percent:.2f}%", end="\n\n")
     else:
         print(f"\r|{prog_bar}| {percent:.2f}%", end="\r")
+
+def get_orgid_outputs(api_key, org_id):
+    '''
+    Creation of multiple files for a particular OrgID
+    '''
+    dashboard = iniciate_dashboard(api_key)
+    device_list = dashboard.organizations.getOrganizationDevicesAvailabilities(org_id, total_pages='all')
+    # TODO: Get device status and sort by: Appliances, switches, APs and others
+    ### CLI pretty Table
+    pTable = PrettyTable()
+    pTable.field_names = ["Org ID",
+                        "device type",
+                        "status"]             
+    for device in device_list:
+        match device['productType']:
+            case 'appliance':
+                pTable.add_row([str(org_id), device['productType'], device['status']])
+            case 'wireless':
+                pTable.add_row([str(org_id), device['productType'], device['status']])
+            case default:
+                pTable.add_row([str(org_id), "others", device['status']])
+    print(pTable)
+    # TODO: Create table which will be used for .md, SVG and markmap
