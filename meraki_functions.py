@@ -1,4 +1,5 @@
 ''' Current function definition being used in main API script '''
+import json
 import meraki
 from prettytable import PrettyTable
 from dateutil.parser import parse
@@ -35,14 +36,14 @@ def lic_date(date):
     else:
         return date
 
-def table_svg(table):
+def table_svg(table, filename):
     '''
     This funtion will replace date to numbers.
     Licensing date is not sortable from API source.
     '''
     console = Console(record=True)
     console.print(table, justify="center")
-    console.save_svg("outputs/table.svg", title="save_table_svg.py")
+    console.save_svg(f"outputs/{filename}.svg", title=filename)
 
 def progress_bar(progress, total):
     '''
@@ -55,25 +56,34 @@ def progress_bar(progress, total):
     else:
         print(f"\r|{prog_bar}| {percent:.2f}%", end="\r")
 
-def get_orgid_outputs(api_key, org_id):
+def get_orgid_outputs(dashboard, org_id):
     '''
     Creation of multiple files for a particular OrgID
     '''
-    dashboard = iniciate_dashboard(api_key)
     device_list = dashboard.organizations.getOrganizationDevicesAvailabilities(org_id, total_pages='all')
     # TODO: Get device status and sort by: Appliances, switches, APs and others
     ### CLI pretty Table
-    pTable = PrettyTable()
-    pTable.field_names = ["Org ID",
+    devicesTable = PrettyTable()
+    devicesTable.field_names = ["Org ID",
                         "device type",
-                        "status"]             
+                        "device name",
+                        "status"]
+    devicesTable.align = "r"
+    devicesTable.sortby = "device type"
+    devicesTable.hrules = True
     for device in device_list:
         match device['productType']:
             case 'appliance':
-                pTable.add_row([str(org_id), device['productType'], device['status']])
+                devicesTable.add_row([str(org_id), device['productType'], device['name'], device['status']])
             case 'wireless':
-                pTable.add_row([str(org_id), device['productType'], device['status']])
+                devicesTable.add_row([str(org_id), device['productType'], device['name'], device['status']])
+            case 'switch':
+                devicesTable.add_row([str(org_id), device['productType'], device['name'], device['status']])
             case default:
-                pTable.add_row([str(org_id), "others", device['status']])
-    print(pTable)
+                devicesTable.add_row([str(org_id), "others", device['name'], device['status']])
+    # print(devicesTable)
+    table_svg(devicesTable, org_id + "_status")
+    ### Gather original json file for investigation 
+    # print(json.dumps(device_list[0], indent=4))
+
     # TODO: Create table which will be used for .md, SVG and markmap

@@ -86,7 +86,7 @@ pTable.hrules = True
 
 # Providing SVG file in the outputs folder
 logging.info('Creating SVG file from collected data')
-table_svg(pTable)
+table_svg(pTable, "fullTable_licensing")
 
 # Providing markdown file in the outputs folder
 logging.info('Creating md file from collected data')
@@ -100,5 +100,5 @@ desired_OrgID = input(" >>>> Please, select desired Org ID to create SVG and mar
 print('\n')
 logging.info(f'Creating .md , SVG and markmap file for requested Org ID: {desired_OrgID}.')
 # Getting output files for specific OrgID
-get_orgid_outputs(API_KEY, desired_OrgID)
+get_orgid_outputs(dashboard, desired_OrgID)
 logging.info(f'Created .md , SVG and markmap file for requested Org ID: {desired_OrgID}.')
