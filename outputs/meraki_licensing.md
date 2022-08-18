@@ -19,6 +19,19 @@
 
 #### MX64: 1
 
+## [Atria](https://n264.meraki.com/o/4gpajbbc/manage/organization/overview)
+  
+- Expiration Date: 2022-09-15
+### Allowed Devices
+
+#### MS120-8LP: 3
+
+#### SM: 300
+
+#### wireless: 3
+
+#### MX64: 3
+
 ## [Heel Colombia](https://n264.meraki.com/o/m_vIFa/manage/organization/overview)
   
 - Expiration Date: N/A
@@ -89,19 +102,6 @@
 ### Allowed Devices
 
 #### N/A
-
-## [Atria](https://n264.meraki.com/o/4gpajbbc/manage/organization/overview)
-  
-- Expiration Date: 2022-09-15
-### Allowed Devices
-
-#### MS120-8LP: 3
-
-#### SM: 300
-
-#### wireless: 3
-
-#### MX64: 3
 
 ## [Colombiana de Trasplantes](https://n264.meraki.com/o/mfKFec/manage/organization/overview)
   
