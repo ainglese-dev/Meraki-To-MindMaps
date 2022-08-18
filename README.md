@@ -30,6 +30,7 @@ sudo apt install npm
 sudo npm install markmap-cli -g
 ```
 
+
 ## Future developments
  - Gather SVG and markmap by choosing an OrgID. filename should include OrgID.
  - Gather and sort Offline / online devices within an OrgID.
