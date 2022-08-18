@@ -23,6 +23,10 @@ Download or clone the mind_nmap repository:
 git clone https://github.com/AngelIV23/Meraki-To-MindMaps.git
 ```
 
+If needed, you can create optionally the next folders depending on current requirements and code tweaks you'd like to make:
+```
+mkdir outputs logs
+
 Install markmap into your environment:
 ``` console
 sudo apt update

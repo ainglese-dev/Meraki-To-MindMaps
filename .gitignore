@@ -129,7 +129,4 @@ dmypy.json
 .pyre/
 
 # Miscelaneous files
-outputs/**
-outputs/fullTable_licensing.svg
-outputs/*.html
 outputs
