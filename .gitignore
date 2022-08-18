@@ -119,7 +119,7 @@ mrk_*
 
 # mkdocs documentation
 /site
-outputs/**
+
 # mypy
 .mypy_cache/
 .dmypy.json
@@ -127,4 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-outputs/
+
+# Miscelaneous files
+outputs/**
+outputs/fullTable_licensing.svg
+outputs/*.html
+outputs
