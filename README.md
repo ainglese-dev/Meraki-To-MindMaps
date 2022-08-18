@@ -39,7 +39,7 @@ Create .env file which will contain the API KEY from the organization(s) with th
 API_KEY = <API key or token from Dashboard>
 ```
 
-## Aplication walkthorugh:
+## Application walkthorugh:
 
 1. Run the main script which will automatically gather data from corresponding key (by default, Meraki API is being used):
 ```
