@@ -34,6 +34,24 @@ sudo apt install npm
 sudo npm install markmap-cli -g
 ```
 
+Create .env file which will contain the API KEY from the organization(s) with the next format:
+```
+API_KEY = <API key or token from Dashboard>
+```
+
+## Aplication walkthorugh:
+
+1. Run the main script which will automatically gather data from corresponding key (by default, Meraki API is being used):
+```
+python meraki_api_main.py
+```
+
+2. Multiple log messages will appear in the console notifying the current step including progress bar:
+
+![Progress bar](images/progress_bar.png)
+
+3. Looping in as many organizations required to generate SVG files including each device current status:
+
 
 ## Future developments
  - Gather SVG and markmap by choosing an OrgID. filename should include OrgID.

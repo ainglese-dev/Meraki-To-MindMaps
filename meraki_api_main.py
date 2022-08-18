@@ -10,7 +10,7 @@ import time
 from dotenv import load_dotenv
 from prettytable import PrettyTable
 from mdutils.mdutils import MdUtils
-from meraki_functions import iniciate_dashboard, get_licensing, lic_date, table_svg, progress_bar, get_orgid_outputs
+from meraki_functions import *
 
 # defining logging system
 
@@ -96,9 +96,17 @@ mdFile.create_md_file()
 logging.info('Creating Markmap file from md file')
 os.system(f'markmap --no-open outputs/meraki_licensing.md --output outputs/licensing_MindMap.html')
 
-desired_OrgID = input(" >>>> Please, select desired Org ID to create SVG and markmap from table above: ")
-print('\n')
-logging.info(f'Creating .md , SVG and markmap file for requested Org ID: {desired_OrgID}.')
+
+
 # Getting output files for specific OrgID
-get_orgid_outputs(dashboard, desired_OrgID)
-logging.info(f'Created .md , SVG and markmap file for requested Org ID: {desired_OrgID}.')
+while True:
+    desired_OrgID = input("\n >>>> Please, select desired Org ID to create SVG and markmap from table above: ")
+    print('\n')
+    logging.info(f'Creating .md , SVG and markmap file for requested Org ID: {desired_OrgID}.')
+    get_orgid_outputs(dashboard, desired_OrgID)
+    logging.info(f'Created .md , SVG and markmap file for requested Org ID: {desired_OrgID}.')
+    selection = input('\n  >>>> Would you like to continue with another Org ID SVG creation? [yes / no]: ')
+    if selection.lower() == 'yes':
+        continue
+    else: break
+
