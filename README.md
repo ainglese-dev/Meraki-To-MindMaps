@@ -52,7 +52,7 @@ python meraki_api_main.py
 
 3. Looping in as many organizations required to generate SVG files including each device current status:
 
-![svg output per OrgID](images/orgid_output.GIF)
+![svg output per OrgID](images/org_id_svg_output.png)
 
 ## Future developments
  - Gather SVG and markmap by choosing an OrgID. filename should include OrgID.
