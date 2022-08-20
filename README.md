@@ -54,6 +54,10 @@ python meraki_api_main.py
 
 ![svg output per OrgID](images/org_id_svg_output.png)
 
+4. Outputs:
+
+![markmap per licensing](images/orgid_markmap.GIF)
+
 ## Future developments
  - Gather SVG and markmap by choosing an OrgID. filename should include OrgID.
  - Gather and sort Offline / online devices within an OrgID.
