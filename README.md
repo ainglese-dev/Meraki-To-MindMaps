@@ -48,10 +48,11 @@ python meraki_api_main.py
 
 2. Multiple log messages will appear in the console notifying the current step including progress bar:
 
-![Progress bar](images/progress_bar.png)
+![Progress bar](images/progress_bar.GIF)
 
 3. Looping in as many organizations required to generate SVG files including each device current status:
 
+![svg output per OrgID](images/orgid_output.GIF)
 
 ## Future developments
  - Gather SVG and markmap by choosing an OrgID. filename should include OrgID.
