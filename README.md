@@ -54,9 +54,13 @@ python meraki_api_main.py
 
 ![svg output per OrgID](images/org_id_svg_output.png)
 
-4. Outputs:
+4. Outputs 1. Markmap file for global licensing:
 
 ![markmap per licensing](images/orgid_markmap.GIF)
+
+5. Output 2. SVG file per each OrgID:
+
+![svg output per OrgID](images/org_id_svg_output.png)
 
 ## Future developments
  - Gather SVG and markmap by choosing an OrgID. filename should include OrgID.
