@@ -60,7 +60,7 @@ python meraki_api_main.py
 
 5. Output 2. SVG file per each OrgID:
 
-![svg output per OrgID](images/org_id_svg_output.png)
+![svg output per OrgID](images/org_id_681155_status.svg)
 
 ## Future developments
  - Gather SVG and markmap by choosing an OrgID. filename should include OrgID.
