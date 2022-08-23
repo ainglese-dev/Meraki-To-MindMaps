@@ -1,5 +1,7 @@
 # Meraki-To-MindMaps
 
+[![published](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-published.svg)](https://developer.cisco.com/codeexchange/github/repo/AngelIV23/Meraki-To-MindMaps)
+
 ![Script Result](images/table.svg)
 
 # Installation for debian-based OS
