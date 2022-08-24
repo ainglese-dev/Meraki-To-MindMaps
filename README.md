@@ -25,6 +25,10 @@ Download or clone the mind_nmap repository:
 git clone https://github.com/AngelIV23/Meraki-To-MindMaps.git
 ```
 
+Install Python packages using pip according to the requirements.txt file
+```
+pip install -r requirements.txt
+```
 If needed, you can create optionally the next folders depending on current requirements and code tweaks you'd like to make:
 ```
 mkdir outputs logs
