@@ -75,7 +75,7 @@ for company in response:
             mdFile.new_header(level=4, title=title)
     else:
         mdFile.new_header(level=4, title=licensing["licensedDeviceCounts"])
-    time.sleep(1)
+    time.sleep(0.2)
     progress_bar(response.index(company), total_progress -1)
 
 # Structure the current Org table

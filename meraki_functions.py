@@ -73,6 +73,12 @@ def get_orgid_outputs(dashboard, org_id):
         devicesTable.align = "r"
         devicesTable.sortby = "device type"
         devicesTable.hrules = True
+        # print placed for debuggin purposes issue#2
+        print(type(device_list))
+        try:
+            print(json.loads(device_list))
+        except:
+            print(device_list)
         for device in device_list:
             if device['status'] == 'online':
                 match device['productType']:
