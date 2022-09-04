@@ -1,5 +1,4 @@
 ''' Current function definition being used in main API script '''
-import json
 import meraki
 from prettytable import PrettyTable
 from dateutil.parser import parse
@@ -7,6 +6,9 @@ from rich.console import Console
 
 
 def iniciate_dashboard(api_key):
+    """
+    Function to initiate dashboard session
+    """
     dashboard = meraki.DashboardAPI(api_key, log_path="logs", suppress_logging=True)
     return dashboard
 
@@ -22,8 +24,8 @@ def get_licensing(api_key,org_id):
     organization_id = org_id
     try:
         response = dashboard.organizations.getOrganizationLicensesOverview(organization_id)
-    except:
-        pass
+    except: # pylint: disable=bare-except
+        print(f'\n >> ERROR: Error getting data via API for OrgID: {organization_id}.\n')
     return response
 
 def lic_date(date):
@@ -34,8 +36,7 @@ def lic_date(date):
     if date != "N/A":
         date_formatted = parse(date.replace(" UTC", "")).strftime('%Y-%m-%d')
         return date_formatted
-    else:
-        return date
+    return date
 
 def table_svg(table, filename):
     '''
@@ -62,33 +63,37 @@ def get_orgid_outputs(dashboard, org_id):
     Creation of multiple files for a particular OrgID
     '''
     try:
-        device_list = dashboard.organizations.getOrganizationDevicesAvailabilities(org_id, total_pages='all')
-        # TODO: Get device status and sort by: Appliances, switches, APs and others
+        device_list = dashboard.organizations.getOrganizationDevicesAvailabilities(org_id,\
+             total_pages='all')
         ### CLI pretty Table
-        devicesTable = PrettyTable()
-        devicesTable.field_names = ["Org ID",
+        dev_table = PrettyTable()
+        dev_table.field_names = ["Org ID",
                             "device type",
                             "device name",
                             "status"]
-        devicesTable.align = "r"
-        devicesTable.sortby = "device type"
-        devicesTable.hrules = True
+        dev_table.align = "r"
+        dev_table.sortby = "device type"
+        dev_table.hrules = True
         for device in device_list:
             if device['status'] == 'online':
                 match device['productType']:
                     case 'appliance':
-                        devicesTable.add_row([str(org_id), device['productType'], device['name'], device['status']])
+                        dev_table.add_row([str(org_id), device['productType'], \
+                            device['name'], device['status']])
                     case 'wireless':
-                        devicesTable.add_row([str(org_id), device['productType'], device['name'], device['status']])
+                        dev_table.add_row([str(org_id), device['productType'], \
+                            device['name'], device['status']])
                     case 'switch':
-                        devicesTable.add_row([str(org_id), device['productType'], device['name'], device['status']])
-                    case default:
-                        devicesTable.add_row([str(org_id), "others", device['name'], device['status']])
-        # print(devicesTable)
-        table_svg(devicesTable, "org_id_" + org_id + "_status")
-        ### Gather original json file for investigation 
+                        dev_table.add_row([str(org_id), device['productType'], \
+                            device['name'], device['status']])
+                    case _:
+                        dev_table.add_row([str(org_id), "others", device['name'],\
+                             device['status']])
+        # print(dev_table)
+        table_svg(dev_table, "org_id_" + org_id + "_status")
+        ### Gather original json file for investigation
         # print(json.dumps(device_list[0], indent=4))
 
-        # TODO: Create table which will be used for .md, SVG and markmap
-    except:
-        print(f'[ERROR]: Check Organization {org_id} API status or licensing status since there was an error retrieving data.\n')
+    except: # pylint: disable=bare-except
+        print(f'[ERROR]: Check Organization {org_id} API status or \
+            licensing status since there was an error retrieving data.\n')
